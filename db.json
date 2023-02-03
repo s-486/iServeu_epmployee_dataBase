@@ -1,0 +1,255 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "Susil Kumar",
+      "lastName": "Behera",
+      "email": "susilbehera486@gmail.com",
+      "mobile": 8249205866,
+      "salary": "40000"
+    },
+    {
+      "id": 4,
+      "firstName": "Sujit Kumar",
+      "lastName": "Behera",
+      "email": "sujitkumarb373@gmail.com",
+      "mobile": 8456950698,
+      "salary": "84545"
+    },
+    {
+      "id": 5,
+      "firstName": "Anil",
+      "lastName": "Ghosh",
+      "email": "example@xmail.com",
+      "mobile": 7777777785,
+      "salary": "52465"
+    },
+    {
+      "id": 6,
+      "firstName": "Shubham",
+      "lastName": "Rout",
+      "email": "shubhamrout69@gmail.com",
+      "mobile": 7532125470,
+      "salary": "52006"
+    },
+    {
+      "id": 7,
+      "firstName": "niyatee rashmee",
+      "lastName": "Sahoo",
+      "email": "gudisahoo@gmail.com",
+      "mobile": 8617295228,
+      "salary": "50000"
+    },
+    {
+      "id": 8,
+      "firstName": "Biswanath",
+      "lastName": "Sahoo",
+      "email": "biswanathofficial3000@gmail.com",
+      "mobile": 6370083620,
+      "salary": "150000"
+    },
+    {
+      "id": 1,
+      "firstName": "Susil Kumar",
+      "lastName": "Behera",
+      "email": "susilbehera486@gmail.com",
+      "mobile": 8249205866,
+      "salary": "40000"
+    },
+    {
+      "id": 4,
+      "firstName": "Sujit Kumar",
+      "lastName": "Behera",
+      "email": "sujitkumarb373@gmail.com",
+      "mobile": 8456950698,
+      "salary": "84545"
+    },
+    {
+      "id": 5,
+      "firstName": "Anil",
+      "lastName": "Ghosh",
+      "email": "example@xmail.com",
+      "mobile": 7777777785,
+      "salary": "52465"
+    },
+    {
+      "id": 6,
+      "firstName": "Shubham",
+      "lastName": "Rout",
+      "email": "shubhamrout69@gmail.com",
+      "mobile": 7532125470,
+      "salary": "52006"
+    },
+    {
+      "id": 7,
+      "firstName": "niyatee rashmee",
+      "lastName": "Sahoo",
+      "email": "gudisahoo@gmail.com",
+      "mobile": 8617295228,
+      "salary": "50000"
+    },
+    {
+      "id": 8,
+      "firstName": "Biswanath",
+      "lastName": "Sahoo",
+      "email": "biswanathofficial3000@gmail.com",
+      "mobile": 6370083620,
+      "salary": "150000"
+    },
+    {
+      "id": 1,
+      "firstName": "Susil Kumar",
+      "lastName": "Behera",
+      "email": "susilbehera486@gmail.com",
+      "mobile": 8249205866,
+      "salary": "40000"
+    },
+    {
+      "id": 4,
+      "firstName": "Sujit Kumar",
+      "lastName": "Behera",
+      "email": "sujitkumarb373@gmail.com",
+      "mobile": 8456950698,
+      "salary": "84545"
+    },
+    {
+      "id": 5,
+      "firstName": "Anil",
+      "lastName": "Ghosh",
+      "email": "example@xmail.com",
+      "mobile": 7777777785,
+      "salary": "52465"
+    },
+    {
+      "id": 6,
+      "firstName": "Shubham",
+      "lastName": "Rout",
+      "email": "shubhamrout69@gmail.com",
+      "mobile": 7532125470,
+      "salary": "52006"
+    },
+    {
+      "id": 7,
+      "firstName": "niyatee rashmee",
+      "lastName": "Sahoo",
+      "email": "gudisahoo@gmail.com",
+      "mobile": 8617295228,
+      "salary": "50000"
+    },
+    {
+      "id": 8,
+      "firstName": "Biswanath",
+      "lastName": "Sahoo",
+      "email": "biswanathofficial3000@gmail.com",
+      "mobile": 6370083620,
+      "salary": "150000"
+    },
+    {
+      "id": 1,
+      "firstName": "Susil Kumar",
+      "lastName": "Behera",
+      "email": "susilbehera486@gmail.com",
+      "mobile": 8249205866,
+      "salary": "40000"
+    },
+    {
+      "id": 4,
+      "firstName": "Sujit Kumar",
+      "lastName": "Behera",
+      "email": "sujitkumarb373@gmail.com",
+      "mobile": 8456950698,
+      "salary": "84545"
+    },
+    {
+      "id": 5,
+      "firstName": "Anil",
+      "lastName": "Ghosh",
+      "email": "example@xmail.com",
+      "mobile": 7777777785,
+      "salary": "52465"
+    },
+    {
+      "id": 6,
+      "firstName": "Shubham",
+      "lastName": "Rout",
+      "email": "shubhamrout69@gmail.com",
+      "mobile": 7532125470,
+      "salary": "52006"
+    },
+    {
+      "id": 7,
+      "firstName": "niyatee rashmee",
+      "lastName": "Sahoo",
+      "email": "gudisahoo@gmail.com",
+      "mobile": 8617295228,
+      "salary": "50000"
+    },
+    {
+      "id": 8,
+      "firstName": "Biswanath",
+      "lastName": "Sahoo",
+      "email": "biswanathofficial3000@gmail.com",
+      "mobile": 6370083620,
+      "salary": "150000"
+    }
+  ],
+  "users": [
+    {
+      "name": "demo one",
+      "email": "demo1@gmail.com",
+      "mobile": "9999999999",
+      "password": "44444",
+      "repassword": "44444",
+      "admin": true,
+      "id": 4
+    },
+    {
+      "name": "demo two",
+      "email": "demo2@gmail.com",
+      "mobile": "9999999999",
+      "password": "44444",
+      "repassword": "44444",
+      "admin": false,
+      "id": 5
+    },
+    {
+      "name": "demo three",
+      "email": "demo3@gmail.com",
+      "mobile": "9999999999",
+      "password": "44444",
+      "repassword": "44444",
+      "admin": false,
+      "id": 6
+    },
+    {
+      "name": "Demo Four",
+      "email": "demo4@gmail.com",
+      "mobile": "8888888888",
+      "password": "44444",
+      "repassword": "44444",
+      "admin": true,
+      "id": 7
+    },
+    {
+      "name": "Demo Seven Mishra",
+      "email": "demo7@gmail.com",
+      "mobile": "9999999999",
+      "password": "44444",
+      "repassword": "44444",
+      "admin": true,
+      "id": 8
+    },
+    {
+      "name": "Susil Kumar Behera",
+      "email": "susilbehera486@gmail.com",
+      "mobile": "8249205866",
+      "password": "Susil@12345",
+      "repassword": "Susil@12345",
+      "admin": true,
+      "id": 9
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

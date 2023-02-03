@@ -1,0 +1,16 @@
+span {
+    color: red
+}
+
+.content {
+    border: .5px solid black;
+}
+
+input {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.search-bar:hover {
+    cursor: pointer;
+}

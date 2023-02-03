@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contact Form Template</title>
+    <link rel="stylesheet" href="/build/tailwind.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+</head>
+
+<body class>
+    <div>
+        <div>
+            <div class="py-12 dark:bg-gray-900 flex justify-center lg:px-12">
+                <div class="cursor-pointer flex items-center">
+                    <div class="text-2xl text-white tracking-wide ml-2 font-semibold">iServeU Employee Database</div>
+                </div>
+            </div>
+            <div class="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24">
+                <h2 class="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl
+                    xl:text-bold">Sign Up</h2>
+                <div class="mt-1">
+                    <form [formGroup]="signup" (ngSubmit)="signupform()">
+                        <div class="mt-4">
+                            <div class="text-sm font-bold text-gray-700 tracking-wide">Name</div>
+                            <input formControlName="name"
+                                class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                                type="text" placeholder="Enter your full name">
+                            <span *ngIf="name && name.invalid && name?.touched">Enter valid name</span>
+                        </div>
+                        <div class="mt-4">
+                            <div class="text-sm font-bold text-gray-700 tracking-wide">Email Address</div>
+                            <input formControlName="email"
+                                class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                                type="text" placeholder="Enter your mail ID">
+                            <span *ngIf="email && email.invalid && email?.touched">Enter valid email ID</span>
+                        </div>
+                        <div class="mt-4">
+                            <div class="text-sm font-bold text-gray-700 tracking-wide">Mobile Number</div>
+                            <input formControlName="mobile"
+                                class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                                type="text" placeholder="10-digit mobile number">
+                            <span *ngIf="mobile && mobile.invalid && mobile?.touched">Enter valid mobile number</span>
+                        </div>
+                        <div class="mt-4">
+                            <div class="text-sm font-bold text-gray-700 tracking-wide">Password</div>
+                            <input formControlName="password"
+                                class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                                type="password" placeholder="Enter your new password">
+                            <span *ngIf="password && password.invalid && password?.touched">Enter your password</span>
+                        </div>
+                        <div class="mt-4">
+                            <div class="text-sm font-bold text-gray-700 tracking-wide">Re-Enter Password</div>
+                            <input formControlName="repassword"
+                                class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                                type="password" placeholder="Re-Enter password">
+                            <span *ngIf="repassword && repassword.invalid && repassword?.touched">Re-Enter your
+                                password</span>
+                        </div>
+                        <div class="flex items-center mb-4 mt-4 text-sm font-bold text-gray-700 tracking-wide">
+                            <input formControlName="admin" id="admin-checkbox" type="checkbox" value=""
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="default-checkbox"
+                                class="ml-2 text-sm font-bold text-gray-700 tracking-wide">Admin</label>
+                        </div>
+                        <div class="mt-4">
+                            <button [disabled]="signup.invalid"
+                                [ngClass]="{'bg-gray-500': signup.invalid, 'text-gray-700': signup.invalid}" class=" bg-green-500 text-gray-100 p-4 w-full rounded-full tracking-wide
+                                font-semibold font-display focus:outline-none focus:shadow-outline">
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                    <div class="mt-2 mb-2 text-sm font-display font-semibold text-gray-700 text-center">
+                        Have an account ? <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page"
+                            class="cursor-pointer text-indigo-600 hover:text-indigo-800">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <footer class="p-4 shadow md:px-6 md:py-8 dark:bg-gray-900 mt-5">
+        <div class="sm:flex  sm:justify-between">
+            <a href="https://iserveu.in/" class="flex items-center mb-4 sm:mb-0">
+                <span class="self-center text-2xl font-semibold text-white">ISERVEU</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-white sm:text-center dark:text-gray-400"><a href="https://iserveu.in/"
+                class="hover:underline">iServeu.com</a>.
+        </span>
+    </footer>
+</body>
+
+</html>

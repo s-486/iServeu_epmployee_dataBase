@@ -1,0 +1,119 @@
+<div class="mb-2">
+  <nav class="navbar.navbar-light bg-black py-12 lg:px-12">
+    <div class="continer-fluid items-center flex">
+      <h1 style="color: aliceblue;" class="ml-2 mb-2 text-2xl items-center">iServeU Employee Database</h1>
+      <div class="justify-between d-flex ml-2 mr-2 mb-2 px-2 py-2">
+        <button (click)="clickAddEmploye()" type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#exampleModal" class="btn btn-success bg-green-500">Add Employee</button>
+        <button (click)="logout()" class="btn btn-danger mx-2">Logout</button>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="m-5 content rounded shadow p-2">
+    <table class="table mt-3">
+      <thead>
+        <tr>
+          <th scope="col"> Employee Id</th>
+          <th scope="col">First Name </th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email Id</th>
+          <th scope="col">Mob No.</th>
+          <th scope="col">Salary</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of employeeData">
+          <td>{{row.id}}</td>
+          <td>{{row.firstName}}</td>
+          <td>{{row.lastName}}</td>
+          <td>{{row.email}}</td>
+          <td>{{row.mobile}}</td>
+          <td>{{row.salary}}</td>
+          <td>
+            <button (click)="onEdit(row)" type="button" class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#exampleModal" class="btn btn-info">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+              </svg>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Employee Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formValue">
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label">First Name</label>
+              <input type="text" formControlName="firstName" class="form-control" id="formGroupExampleInput"
+                placeholder="First Name">
+              <span *ngIf="firstName && firstName.invalid && firstName?.touched">Enter valid First Name</span>
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Last Name</label>
+              <input type="text" formControlName="lastName" class="form-control" id="formGroupExampleInput2"
+                placeholder="Last Name">
+              <span *ngIf="lastName && lastName.invalid && lastName?.touched">Enter valid Last Name</span>
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Email Id</label>
+              <input type="mail" [disabled]="true" formControlName="email" class="form-control"
+                id="formGroupExampleInput2" placeholder="Email Id">
+              <span *ngIf="email && email.invalid && email?.touched">Enter valid email ID</span>
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Mob No</label>
+              <input type="number" formControlName="mobile" class="form-control" id="formGroupExampleInput2"
+                placeholder="Mob No">
+              <span *ngIf="mobile && mobile.invalid && mobile?.touched">Enter valid Mobile Number</span>
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Salary</label>
+              <input type="text" formControlName="salary" class="form-control" id="formGroupExampleInput2"
+                placeholder="Salary">
+              <span *ngIf="salary && salary.invalid && salary?.touched">Enter valid Salary</span>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary bg-gray-500" data-bs-dismiss="modal">Close</button>
+          <button type="button" *ngIf="showAdd" (click)="postEmployeeDetails()" class="btn btn-primary">Add</button>
+          <button type="button" *ngIf="showUpdate" (click)="updateEmployeeDetails()" [disabled]="formValue.invalid"
+            class="btn btn-primary bg-green-500">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--footer-->
+<footer class="p-4 shadow md:px-6 md:py-8 dark:bg-gray-900 mt-5">
+  <div class="sm:flex  sm:justify-between">
+      <a href="https://iserveu.in/" class="flex items-center mb-4 sm:mb-0">
+          <span class="self-center text-2xl font-semibold text-white">ISERVEU</span>
+      </a>
+      <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
+          <li>
+              <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+          </li>
+          <li>
+              <a href="#" class="hover:underline">Contact</a>
+          </li>
+      </ul>
+  </div>
+  <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+  <span class="block text-sm text-white sm:text-center dark:text-gray-400"><a href="https://iserveu.in/"
+          class="hover:underline">iServeu.com</a>.
+  </span>
+</footer>
